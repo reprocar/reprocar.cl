@@ -1,99 +1,179 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REPROCAR.CL - ECU Solutions</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #000000, #2f1d00);
-            color: #FFD700;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #000;
-        }
-        header img {
-            width: 200px;
-            max-width: 80%;
-        }
-        nav {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #111;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        h2 {
-            text-align: center;
-            margin-top: 30px;
-            color: #FFD700;
-        }
-        .services {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            gap: 20px;
-        }
-        .card {
-            background-color: #1a1a1a;
-            border: 2px solid #B22222;
-            border-radius: 15px;
-            padding: 15px;
-            width: 90%;
-            max-width: 400px;
-            color: #fff;
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            max-height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reprocar.cl - Electrónica Automotriz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #0c0c0c;
+      color: #f0f0f0;
+    }
+    header {
+      background-image: url('https://images.unsplash.com/photo-1603478494983-6c9ed30db83e');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    header a {
+      background: #f39c12;
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #1c1c1c;
+      border: 1px solid #f39c12;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .card img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #f39c12;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+    .advantages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-around;
+      margin-top: 3rem;
+    }
+    .advantage {
+      flex: 1 1 200px;
+      background: #111;
+      padding: 1.5rem;
+      border-left: 5px solid #f39c12;
+      border-radius: 8px;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background: #f39c12;
+      color: #000;
+      padding: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Reprocar.cl</h1>
+    <p>Soluciones electrónicas avanzadas para vehículos diésel</p>
+    <a href="#contacto">Solicitar Diagnóstico</a>
+  </header>
 
-<header>
-    <img src="reprocar_logo.png" alt="REPROCAR ECU Solutions">
-</header>
-
-<nav>
-    <a href="#">Servicios</a>
-    <a href="#">Ventajas</a>
-    <a href="#">Contacto</a>
-</nav>
-
-<h2>Servicios Especializados</h2>
-
-<div class="services">
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Diesel_particulate_filter.svg/1200px-Diesel_particulate_filter.svg.png" alt="DPF OFF">
+  <section id="servicios">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Servicios Especializados</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920163.png" alt="DPF">
         <h3>DPF OFF</h3>
         <p>Desactivación del filtro de partículas diésel para mejorar rendimiento y evitar fallos.</p>
-    </div>
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/ECU_Electronic_Control_Unit_Open.jpg/640px-ECU_Electronic_Control_Unit_Open.jpg" alt="IMMO OFF">
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3461/3461314.png" alt="IMMO">
         <h3>IMMO OFF</h3>
         <p>Eliminación del inmovilizador electrónico para soluciones ECU y swaps de motor.</p>
-    </div>
-    <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/EGR_Valve.jpg/640px-EGR_Valve.jpg" alt="EGR OFF">
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995474.png" alt="EGR">
         <h3>EGR OFF</h3>
-        <p>Desactivación del sistema de recirculación de gases (EGR) para optimizar el rendimiento.</p>
+        <p>Cancelación de la válvula EGR para mejorar el flujo de aire y desempeño del motor.</p>
+      </div>
     </div>
-</div>
+  </section>
 
+  <section id="ventajas">
+    <h2 style="text-align: center;">¿Por qué elegirnos?</h2>
+    <div class="advantages">
+      <div class="advantage">Diagnóstico rápido y preciso</div>
+      <div class="advantage">Atención a flotas de camiones</div>
+      <div class="advantage">Alta experiencia técnica</div>
+      <div class="advantage">Soluciones garantizadas</div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="tel" placeholder="Teléfono" required>
+      <textarea rows="4" placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Reprocar.cl — Electrónica Automotriz de Alto Nivel</p>
+    <p>Síguenos en redes sociales</p>
+  </footer>
 </body>
 </html>
